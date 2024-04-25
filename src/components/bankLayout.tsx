@@ -6,8 +6,8 @@ import useBankHandler from '../hooks/useBankHandler';
 import styles from "@/styles/Home.module.css"
 
 const BankLayout: React.FC<BankPageProps> = ({ bankList }) => {
-  const { filteredBankList, handleSearch, handleDelete } = useBankHandler(bankList);
-
+  const { filteredBankList, handleSearch, handleDelete } = useBankHandler();
+  console.log(bankList);
   return (
     <div className={styles.layout}>
       <SearchBar onSearch={handleSearch} bankList={bankList} />
